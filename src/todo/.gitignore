@@ -1,0 +1,7 @@
+# Compilados
+out/
+*.class
+
+# IntelliJ
+.idea/
+*.iml
