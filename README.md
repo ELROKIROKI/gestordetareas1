@@ -11,7 +11,6 @@ Las tareas se guardan en memoria, es decir, se pierden al cerrar el programa.
 - Eliminar una tarea.
 - Ver todas las tareas (pendientes y completadas).
 
-# Cómo se ejecuta
 
 # desde inteliji idea
 
@@ -31,35 +30,18 @@ java -cp out todo.Main
 
 Al arrancar aparece un menú; se escribe el número de la opción y se pulsa Enter:
 
-```
+
 1. Añadir tarea
 2. Ver tareas pendientes
 3. Marcar tarea como completada
 4. Eliminar tarea
 5. Ver todas las tareas
 0. Salir
-```
 
 Cada tarea tiene un id numérico, que es el que se pide para completarla o
 eliminarla. Las tareas se muestran con `[ ]` si están pendientes y con `[X]`
 si están completadas.
 
-Ejemplo:
-
-```
-Tareas pendientes:
-  [ ] #2 - Estudiar Java
-```
-
-# Estructura del proyecto
-
-```
-src/todo/
-├── Main.java          Punto de entrada
-├── MenuConsola.java   Menú e interacción con el usuario (Scanner)
-├── GestorTareas.java  Lógica: añadir, listar, completar y eliminar
-└── Tarea.java         Modelo de una tarea (id, descripción, estado)
-```
 
 La idea de esta separación es que `GestorTareas` no imprima nada por pantalla:
 así la lógica queda aislada de la interfaz de consola y sería fácil reutilizarla
